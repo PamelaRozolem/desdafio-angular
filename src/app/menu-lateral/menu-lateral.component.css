@@ -1,0 +1,6 @@
+.menuLateral{
+    min-height: 100%;
+    background-color: rgb(225, 225, 225);
+    display: flex;
+    justify-content: center;
+}

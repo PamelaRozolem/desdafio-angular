@@ -1,0 +1,32 @@
+.box-pesquisa{
+    width: 80%;
+
+}
+
+.box-menu{
+    width: 20%;
+}
+
+.bg-red{
+    background-color: red;
+}
+
+.bg-blue{
+    background-color: blue;
+}
+
+.bg-green{
+    background-color: green;
+}
+
+.bg-silver{
+    background-color: silver;
+}
+
+.menu{
+    width: 200px;
+}
+
+.fill{
+    height: 100%;
+}
