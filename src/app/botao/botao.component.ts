@@ -9,9 +9,12 @@ export class BotaoComponent implements OnInit {
 
   constructor() { }
 
-  @Input ()label;
+  @Input() titleBnts;
+
+  
 
   ngOnInit() {
+
   }
 
 }

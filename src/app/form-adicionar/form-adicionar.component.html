@@ -1,0 +1,33 @@
+<form [formGroup]='formUser'>
+  
+  <div class="form-group">
+    <label>NOME</label>
+    <input type="text" formControlName="nome" class="form-control" required>
+  </div>
+
+  <div class="row align-items-center">
+
+   <div class="col ">
+      <div class="form-group">
+          <label>Data</label>
+          <input type="text" formControlName="dtNasc" class="form-control" required>
+      </div>
+   </div>
+    
+    <div class="col">
+        <div class="form-group">
+            <label>SEXO</label>
+            <select class="form-control" formControlName="sexo" required>
+              <option value="F">FEMININO</option>
+              <option value="M">MASCULINO</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="col mt-3">
+      <button class="btn btn-danger" (click)="resetForm()">CANCELAR</button>
+      <button class="btn btn-primary ml-2" (click)="btnSalvar($event)" [disabled]="!formUser.valid">SALVAR</button>
+    </div>
+  
+  </div>
+</form>

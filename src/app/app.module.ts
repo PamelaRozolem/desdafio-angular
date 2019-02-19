@@ -7,6 +7,9 @@ import { HeaderComponent } from './header/header.component';
 import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
 import { BotaoComponent } from './botao/botao.component';
 import { BarraPesquisaComponent } from './barra-pesquisa/barra-pesquisa.component';
+import { TableNameComponent } from './table-name/table-name.component';
+import { FormAdicionarComponent } from './form-adicionar/form-adicionar.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,15 @@ import { BarraPesquisaComponent } from './barra-pesquisa/barra-pesquisa.componen
     HeaderComponent,
     MenuLateralComponent,
     BotaoComponent,
-    BarraPesquisaComponent
+    BarraPesquisaComponent,
+    TableNameComponent,
+    FormAdicionarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,27 +1,31 @@
-<!-- <app-header></app-header>
-<app-barra-pesquisa></app-barra-pesquisa>
- -->
 <div class="d-flex flex-column fill">
-
-    <div class="p-2">header</div>
+    <div>
+        <app-header></app-header>
+    </div>
 
     <div class="d-flex flex-row align-items-stretch fill">
 
         <div class="menu">
-            <app-menu-lateral></app-menu-lateral>
+            <app-menu-lateral [data]="data"></app-menu-lateral>
         </div>
 
-        <div class="p-2">
+        <div class="p-2 flex-grow-1 bd-highlight">
              <div class="p-2">
-                 buscar
+                <app-barra-pesquisa></app-barra-pesquisa>
              </div>
+
+            <div class="flex-grow-1 bd-highligh p-2">
+                <app-table-name [data]="users"></app-table-name>
+            </div>
+          
+            <div class="flex-grow-1 bd-highligh p-2 text-align-left justify-content-end">
+                <button class="btn btn-primary">Adiconar</button>
+            </div>
+
             <div class="p-2">
-                conteudo
+                <app-form-adicionar (adicionarUser)="adicionar($event)"></app-form-adicionar>
             </div>
         </div>
-
     </div>
-
-
  </div>
 

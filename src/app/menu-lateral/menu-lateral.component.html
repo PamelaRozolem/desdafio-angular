@@ -1,6 +1,3 @@
-<div class="menu-lateral d-flex flex-column">
-            <app-botao label="ORDERNAR NOME"></app-botao>
-            <app-botao label="ORDERNAR NASCIMENTO"></app-botao>
-            <app-botao label="FILTRO HOMENS"></app-botao>
-            <app-botao label="FILTRO MULHERES"></app-botao>
+<div class="menu d-flex flex-column pl-2 pr-2">
+    <app-botao *ngFor="let btn of data" [titleBnts]="btn.titleBnts"></app-botao>
 </div>
