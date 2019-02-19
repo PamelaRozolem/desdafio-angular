@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input,Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-botao',
@@ -10,8 +10,12 @@ export class BotaoComponent implements OnInit {
   constructor() { }
 
   @Input() titleBnts;
+  @Output() filtrarUser = new EventEmitter();
 
-  
+  filtro(){
+    event.preventDefault();
+    this.filtrarUser.emit(this.filtro);
+  }
 
   ngOnInit() {
 

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-barra-pesquisa',
@@ -8,6 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class BarraPesquisaComponent implements OnInit {
 
   constructor() { }
+
+@Output() public filter = new EventEmitter;
+
+ public searchFilter(e){
+  this.filter.emit(e.target.value);
+}
 
   ngOnInit() {
   }

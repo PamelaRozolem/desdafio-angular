@@ -11,14 +11,14 @@
 
         <div class="p-2 flex-grow-1 bd-highlight">
              <div class="p-2">
-                <app-barra-pesquisa></app-barra-pesquisa>
+                <app-barra-pesquisa (filter)="filter($event)"></app-barra-pesquisa>
              </div>
 
             <div class="flex-grow-1 bd-highligh p-2">
-                <app-table-name [data]="users"></app-table-name>
+                <app-table-name [filtro]="filterText" [data]="users"></app-table-name>
             </div>
           
-            <div class="flex-grow-1 bd-highligh p-2 text-align-left justify-content-end">
+            <div class="flex-grow-1 bd-highligh p-2 mr-5 text-align-left d-flex justify-content-end">
                 <button class="btn btn-primary">Adiconar</button>
             </div>
 

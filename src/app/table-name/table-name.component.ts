@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TableNameComponent implements OnInit {
 
   @Input() data = [];
+  @Input() filtro="";
 
   constructor() { }
 
