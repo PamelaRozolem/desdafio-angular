@@ -24,7 +24,6 @@ export class AppComponent {
   ];
 
   public adicionar(user){
-    debugger;
     this.users.push(user);
   }
 
