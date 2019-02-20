@@ -10,6 +10,7 @@ import { BarraPesquisaComponent } from './barra-pesquisa/barra-pesquisa.componen
 import { TableNameComponent } from './table-name/table-name.component';
 import { FormAdicionarComponent } from './form-adicionar/form-adicionar.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SearchPipePipe } from './search-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     BotaoComponent,
     BarraPesquisaComponent,
     TableNameComponent,
-    FormAdicionarComponent
+    FormAdicionarComponent,
+    SearchPipePipe
   ],
   imports: [
     BrowserModule,

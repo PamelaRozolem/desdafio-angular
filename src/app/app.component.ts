@@ -8,8 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   protected title = 'desafio';
-
-  public filterText;
+  protected filterData;
 
   protected users = [
     {nome:"pamela",dtNasc:"02/03/1993", sexo: 'F'},
@@ -25,12 +24,14 @@ export class AppComponent {
   ];
 
   public adicionar(user){
+    debugger;
     this.users.push(user);
   }
 
-  public filter(text){
-    this.filterText=text;
+  public filterText(text){
+    this.filterData = text;
   }
+
 
   
 }

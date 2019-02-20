@@ -7,7 +7,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr class="d-flex" *ngFor="let item of data || filter:filtro">
+    <tr class="d-flex" *ngFor="let item of data">
       <td (filtrarUser)="$filtro()"class="col-6">{{item.nome}}</td>
       <td class="col-4">{{item.dtNasc}}</td>
       <td class="col-2">

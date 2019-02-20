@@ -8,15 +8,18 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class BarraPesquisaComponent implements OnInit {
 
+  
+  @Output() search = new EventEmitter();
+  
+  protected searchText = "";
+
   constructor() { }
-
-@Output() public filter = new EventEmitter;
-
- public searchFilter(e){
-  this.filter.emit(e.target.value);
-}
 
   ngOnInit() {
   }
 
+  public onFilter(event){
+    this.search.emit(event);
+  }
+ 
 }
