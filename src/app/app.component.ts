@@ -10,21 +10,23 @@ export class AppComponent {
   protected title = 'desafio';
   protected filterData;
 
-  protected users = [
-    {nome:"pamela",dtNasc:"02/03/1993", sexo: 'F'},
-    {nome:"joao",dtNasc:"22/03/1943",  sexo: 'M'},
-    {nome:"pedro",dtNasc:"02/04/1994",  sexo: 'M'}
+  protected data = [
+    {title:"ORDERNAR NOME", type:"order", field: "nome"},
+    {title:"ORDERNAR NASCIMENTO", type: "order", field: "dtNasc"},
+    {title:"FILTRO HOMENS", type: "filter", field: "sexo", conditional: "M"},
+    {title:"FILTRO FEMININO", type:"filter", field: "sexo", conditional: "F"}
   ];
-
-  protected data=[
-    {titleBnts:"ORDERNAR NOME"},
-    {titleBnts:"ORDERNAR NASCIMENTO"},
-    {titleBnts:"FILTRO HOMENS"},
-    {titleBnts:"FILTRO FEMININO"}
+  protected usersOriginal = [
+    {nome:"pamela",dtNasc:new Date(1993,3,2) , sexo: 'F'},
+    {nome:"joao",dtNasc:new Date(1987,2,23),  sexo: 'M'},
+    {nome:"pedro",dtNasc:new Date(1958,3,6),  sexo: 'M'}
   ];
+  
+  protected users = this.usersOriginal;
 
   public adicionar(user){
-    this.users.push(user);
+    this.usersOriginal.push(user);
+    this.users = this.usersOriginal;
   }
 
   public filterText(text){
@@ -32,6 +34,17 @@ export class AppComponent {
   }
 
 
-  
+  public ordenateUser(conditional){
+   
+  }
+
+  public filterUser(args){
+    const userFiltered = this.usersOriginal.filter( item => {
+      return (item[args.field].indexOf(args.conditional) != -1);
+    });
+    this.users = userFiltered;
+  }
+
+
 }
 

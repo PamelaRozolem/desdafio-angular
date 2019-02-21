@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
-import { BotaoComponent } from './botao/botao.component';
 import { BarraPesquisaComponent } from './barra-pesquisa/barra-pesquisa.component';
 import { TableNameComponent } from './table-name/table-name.component';
 import { FormAdicionarComponent } from './form-adicionar/form-adicionar.component';
@@ -17,7 +16,6 @@ import { SearchPipePipe } from './search-pipe.pipe';
     AppComponent,
     HeaderComponent,
     MenuLateralComponent,
-    BotaoComponent,
     BarraPesquisaComponent,
     TableNameComponent,
     FormAdicionarComponent,

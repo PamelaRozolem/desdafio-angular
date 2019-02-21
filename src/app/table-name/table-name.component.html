@@ -9,7 +9,7 @@
   <tbody>
     <tr class="d-flex" *ngFor="let item of data">
       <td class="col-6">{{item.nome}}</td>
-      <td class="col-4">{{item.dtNasc}}</td>
+      <td class="col-4">{{item.dtNasc | date:"dd/MM/yyyy"}}</td>
       <td class="col-2">
         <img *ngIf="item.sexo === 'F'" src="https://static.dicionariodesimbolos.com.br/upload/ff/d5/simbolos-masculinos-e-femininos-12_xl.jpeg" />
         <img *ngIf="item.sexo === 'M'" src="https://static.dicionariodesimbolos.com.br/upload/ff/d5/simbolos-masculinos-e-femininos-11_xl.jpeg" />
